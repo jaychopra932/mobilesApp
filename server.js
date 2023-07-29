@@ -37,13 +37,16 @@ app.get("/mobiles",function(req,res){
         else{
             let arr=[...result.rows]
             if(ram){
-                arr=arr.filter((a)=>ram.findIndex((b)=>b==a.ram)>=0)
+                let arr1=ram.split(",")
+                arr=arr.filter((a)=>arr1.findIndex((b)=>b==a.ram)>=0)
             }
             if(brand){
-                arr=arr.filter((a)=>brand.findIndex((b)=>b==a.brand)>=0)
+                let arr1=brand.split(",")
+                arr=arr.filter((a)=>arr1.findIndex((b)=>b==a.brand)>=0)
             }
             if(rom){
-                arr=arr.filter((a)=>rom.findIndex((b)=>b==a.rom)>=0)
+                let arr1=rom.split(",")
+                arr=arr.filter((a)=>arr1.findIndex((b)=>b==a.rom)>=0)
             }
             if(sortBy=="id"){
                 arr=arr.sort((a,b)=>a.id-b.id)
