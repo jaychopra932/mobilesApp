@@ -40,7 +40,7 @@ app.get("/mobiles",function(req,res){
                 arr=arr.filter((a)=>ram.findIndex((b)=>b==a.ram)>=0)
             }
             if(brand){
-                arr=arr.filter((a)=>brand.findIndex((b)=>b==a/brand)>=0)
+                arr=arr.filter((a)=>brand.findIndex((b)=>b==a.brand)>=0)
             }
             if(rom){
                 arr=arr.filter((a)=>rom.findIndex((b)=>b==a.rom)>=0)
